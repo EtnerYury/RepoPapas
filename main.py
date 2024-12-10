@@ -4,6 +4,7 @@ import onnxruntime as rt
 from rembg import remove
 from PIL import Image
 import os
+import uvicorn
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 from rembg import new_session
@@ -161,4 +162,3 @@ async def classify(file: UploadFile = File(...)):
             content={"error": str(e)},
             status_code=500
         )
-
