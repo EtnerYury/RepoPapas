@@ -7,3 +7,4 @@ fastapi        # para FastAPI
 python-multipart 
 uvicorn  
 mahotas
+gunicorn
